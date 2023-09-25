@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  padding: 0;
+  margin: 0;
+}
+
+.navLogoLg {
+  display: block;
+  width: 200px;
+}
+.navLogoSm {
+  display: none;
+  width: 100px;
+}
+.navBar {
+  font-size: 16px;
+}
+.navBar li a {
+  color: black;
+  margin-left: 30px;
+}
+
+.bgPrimary {
+  background-color: #c89f67;
+}
+.bgSecondary {
+  background-color: #b5969e;
+}
+/*section 1 */
+.containerHeroImg {
+  background-color: #b5969e;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.sectionTitle {
+  color: #fff;
+  font-size: 24px;
+  padding-top: 180px;
+  padding-left: 120px;
+  padding-bottom: 60px;
+}
+.img-card {
+  height: 100vh;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+}
+
+.img-card::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Slight parallax effect on hover */
+.img-card:hover .content {
+  transform: translateZ(200px);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+.heroImageLeft,
+.heroImageRight {
+  position: relative;
+  height: 100vh;
+}
+
+.heroImgLeftFir,
+.heroImgLeftSce,
+.heroImgLeftThi,
+.heroImgRightFir,
+.heroImgRightSce,
+.heroImgRightThi {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+}
+
+.heroImgLeftFir,
+.heroImgRightFir {
+  width: 320px;
+  height: 440px;
+  z-index: 10;
+}
+.heroImgLeftSce,
+.heroImgRightSce {
+  width: 180px;
+  height: 240px;
+  z-index: 110;
+}
+.heroImgLeftThi,
+.heroImgRightThi {
+  width: 140px;
+  height: 180px;
+  z-index: 100;
+}
+
+.heroImgLeftFir {
+  background-image: url("./images/heroImgLeftFir.jpg");
+  top: 10%;
+  left: 10%;
+}
+.heroImgLeftSce {
+  background-image: url("./images/heroImgLeftSce.jpg");
+  z-index: 100;
+  top: 35%;
+  left: 43%;
+}
+.heroImgLeftThi {
+  background-image: url("./images/heroImgLeftThi.jpg");
+  top: 55%;
+  left: 32%;
+}
+.heroImgRightFir {
+  background-image: url("./images/heroImgRightFir.jpg");
+  top: 10%;
+  left: 10%;
+}
+.heroImgRightSce {
+  background-image: url("./images/heroImgRightSce.jpg");
+  top: 35%;
+  left: 43%;
+}
+.heroImgRightThi {
+  background-image: url("./images/heroImgRightThi.jpg");
+  top: 55%;
+  left: 32%;
+}
+
+.heroTitle {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 35vh;
+  left: 35vw;
+  z-index: 120;
+  color: #fff;
+  font-size: 4vw;
+}
+/*section 1 close */
+
+/*section 2 */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 80vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.box1::after,
+.box2::after,
+.box3::after,
+.box4::after,
+.box5::after,
+.box6::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -170%;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  transition: all 1s ease-in-out;
+  transform: scale(2.2);
+}
+.box1::after {
+  background-image: url("./images/box1.jpg");
+}
+.box2::after {
+  background-image: url("./images/box2.jpg");
+}
+.box3::after {
+  background-image: url("./images/box3.jpg");
+}
+.box4::after {
+  background-image: url("./images/box4.jpg");
+}
+.box5::after {
+  background-image: url("./images/box1.jpg");
+}
+.box6::after {
+  background-image: url("./images/box1.jpg");
+}
+.box1:hover::after,
+.box2:hover::after,
+.box3:hover::after,
+.box4:hover::after,
+.box5:hover::after,
+.box6:hover::after {
+  top: 0;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*section 2 close*/
+
+/* section 3 */
+.icCard {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 3s infinite alternate;
+  background-color: #ffffff;
+  border-radius: 5px;
+  line-height: 30px;
+  box-shadow: 0, 10px, 10px, rgba(0, 0, 0, 0.3);
+  color: #b2a069;
+}
+.icCardSec {
+  -webkit-animation: moverSec 1s infinite alternate;
+  animation: moverSec 3s infinite alternate;
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  box-shadow: 0, 10px, 10px, rgba(0, 0, 0, 0.3);
+  color: #b2a069;
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(200px);
+  }
+}
+@keyframes moverSec {
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+.icTopImg {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+}
+/* section 3  close*/
+
+/* section 4 */
+.owTopImg {
+  height: 90vh;
+}
+
+.owTopImg img {
+  width: 100%;
+  height: 100%;
+}
+/* section 4  close*/
+
+/*section 5 */
+
+.button {
+  display: inline-block;
+  position: relative;
+  background: none;
+  height: 40px;
+  width: 120px;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 15px 25px;
+  /* background: #fff; */
+}
+span {
+  display: block;
+}
+.button::before,
+.button::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+span::before,
+span::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: rgba(0, 0, 0, 0.09);
+}
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+}
+.button:hover span::before,
+.button:hover span::after {
+  height: 100%;
+}
+
+.btn-3::after {
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.6s;
+}
+.btn-3 span::after {
+  transition-delay: 0.4s;
+  right: 0;
+  bottom: 0;
+}
+.btn-3::before {
+  right: 0;
+  top: 0;
+  transition-delay: 0.2s;
+}
+.btn-3 span::before {
+  transition-delay: 0s;
+  left: 0;
+  top: 0;
+}
+.btn-3:hover::after {
+  transition-delay: 0s;
+}
+.btn-3:hover span::after {
+  transition-delay: 0.2s;
+}
+.btn-3:hover::before {
+  transition-delay: 0.4s;
+}
+.btn-3:hover span::before {
+  transition-delay: 0.6s;
+}
+/*.button close */
+
+/*footer */
+.footerNavList li {
+  list-style: none;
+}
+.footerNavList li a {
+  color: black;
+  text-decoration: none;
+}
+.footerNavList li a:hover {
+  color: #b2a069;
+}
+/*footer close */
+
+/*media quiry */
+@media only screen and (max-width: 1023px) {
+  .navBar {
+    font-size: 60px;
+    /* background-image: url("./images/box3.jpg");
+    background-position: center center; */
+    /* background-size: cover; */
+    color: #fff;
+  }
+  .navLogoLg {
+    display: none;
+  }
+  .navLogoSm {
+    display: block;
+  }
+  .heroImgLeftFir {
+    top: 20%;
+    left: 20%;
+  }
+  .heroImgLeftSce {
+    top: 33%;
+    left: 10%;
+  }
+  .heroImgLeftThi {
+    top: 45%;
+    left: 30%;
+  }
+  .heroImgRightFir {
+    top: 10%;
+    left: 10%;
+  }
+  .heroImgRightSce {
+    top: 20%;
+    right: 10%;
+  }
+  .heroImgRightThi {
+    top: 30%;
+    right: 40%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .heroImgLeftFir,
+  .heroImgRightFir {
+    width: 220px;
+    height: 300px;
+  }
+  .heroImgLeftSce,
+  .heroImgRightSce {
+    width: 140px;
+    height: 200px;
+  }
+  .heroImgLeftThi,
+  .heroImgRightThi {
+    width: 120px;
+    height: 180px;
+  }
+  .img-card:hover .content {
+    transform: translateZ(120px);
+  }
+
+  .sectionTitle {
+    padding-left: 50px;
+  }
+  @keyframes mover {
+    0% {
+      transform: 0;
+    }
+  }
+  @keyframes moverSec {
+    100% {
+      transform: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 539px) {
+  .navBar {
+    font-size: 40px;
+  }
+  .heroImgLeftThi,
+  .heroImgRightFir,
+  .heroImgRightThi {
+    display: none;
+  }
+  .heroImgLeftFir {
+    width: 230px;
+    height: 300px;
+    top: 20vh;
+    left: 50%;
+  }
+  .heroImgLeftSce {
+    width: 150px;
+    height: 200px;
+    top: 40vh;
+    left: 10%;
+  }
+  .heroImgRightSce {
+    width: 150px;
+    height: 200px;
+    top: 40vh;
+    right: 40%;
+    left: 0;
+  }
+
+  .box1::after,
+  .box2::after,
+  .box3::after,
+  .box4::after,
+  .box5::after,
+  .box6::after {
+    top: 0;
+    opacity: 1;
+  }
+  .box1:hover::after,
+  .box2:hover::after,
+  .box3:hover::after,
+  .box4:hover::after,
+  .box5:hover::after,
+  .box6:hover::after {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .heroImgLeftFir {
+    width: 180px;
+    height: 220px;
+  }
+  .heroImgLeftSce {
+    width: 120px;
+    height: 180px;
+  }
+  .heroImgRightSce {
+    width: 120px;
+    height: 180px;
+  }
+}

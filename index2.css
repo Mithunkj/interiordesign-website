@@ -1,0 +1,111 @@
+.section-fluid-main {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  padding: 100px 0;
+}
+.sectionRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.sectionRow:hover .sectionCol {
+  opacity: 0.1;
+}
+.sectionCol {
+  position: relative;
+  width: 100%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  transition: opacity 250ms linear;
+}
+.sectionRow .sectionCol:hover {
+  opacity: 1;
+}
+.section {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 15px;
+}
+.sectionInner {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.sectionInner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 250ms linear;
+}
+.sectionCol:hover .sectionInner img {
+  transform: scale(1.2);
+  display: block;
+}
+.sectionText {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  mix-blend-mode: difference;
+}
+.sectionText h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 8vw;
+  line-height: 1;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 250ms linear, opacity 250ms ease;
+}
+.sectionCol:hover + .sectionText h2 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 767px) {
+  .sectionCol {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sectionText h2 {
+    font-size: 12vw;
+  }
+}
